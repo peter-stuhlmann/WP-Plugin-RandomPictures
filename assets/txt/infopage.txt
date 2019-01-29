@@ -1,0 +1,16 @@
+<h2>Random Pictures</h2>
+
+<p>Mit dem Shortcode <strong>[randomPictures]</strong> können zufällige Bilder in Seiten, Beiträge und Sidebars eingebunden werden. Werden keine weiteren Parameter hinzugefügt wird ein zufälliges Bild zum Thema "Landscapes" mit einer Beite von 450px und einer Höhe von 300px eingebunden.</p>
+
+<p>Das eingebundene Bild ändert sich bei jeder Aktualisierung der Seite.</p>
+
+<p>Mit den folgenden Parametern können die Eigenschaften des zufälligen Bildes genauer festgelegt werden:
+  <ul>
+    <li><strong>width="a"</strong> (a = Angabe der Breite in Pixel, aber ohne Angabe der Einheit)</li>
+    <li><strong>height="b"</strong> (b = Angabe der Höhe in Pixel, aber ohne Angabe der Einheit)</li>
+    <li><strong>tags="c"</strong> (c = Angabe des Themas (z.B. cats); mehrere Tags durch Komma trennen)</li>
+    <li><strong>color="d"</strong> (d = Farblook des Bildes; mögliche Werte: red, blue, green, g (Graustufen), p (verpixelt))</li>
+  </ul>
+</p>
+
+<p>Natürlich können auch alle oder einzelne Parameter kombiniert werden: <strong>[randomPictures width="900px" height="300px" tags="cat" color="g"]</strong></p>
