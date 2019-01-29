@@ -59,3 +59,18 @@ function randomPicures_plugin_row_meta( $links, $file ) {
 }
 
 add_filter( 'plugin_row_meta', 'randomPicures_plugin_row_meta', 10, 2 );
+
+
+
+
+// Admin Menu
+
+function randomPicures_admin_menu() {
+    $page_title = 'Random Pictures';
+    $menu_title = 'Random Pictures';
+    $capability = 'manage_options';
+    $menu_slug = 'randompictures-settings';
+    $function = 'randomPictures_settings';
+    add_options_page($page_title, $menu_title, $capability, $menu_slug, $function);
+}
+add_action('admin_menu', 'randomPicures_admin_menu');
