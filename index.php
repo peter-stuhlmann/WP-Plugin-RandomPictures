@@ -70,7 +70,17 @@ function randomPicures_admin_menu() {
     $menu_title = 'Random Pictures';
     $capability = 'manage_options';
     $menu_slug = 'randompictures-settings';
-    $function = 'randomPictures_settings';
+    $function = 'randomPictures_infoPage';
     add_options_page($page_title, $menu_title, $capability, $menu_slug, $function);
 }
 add_action('admin_menu', 'randomPicures_admin_menu');
+
+
+// Plugin page
+
+function randomPicures_infoPage() {
+    $infoPage = file_get_contents(plugins_url( 'assets/txt/infopage.txt', __FILE__ ));
+    if (!current_user_can('manage_options')) {
+        wp_die('You do not have sufficient permissions to access this page.');
+    } echo $infoPage;
+}
