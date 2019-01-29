@@ -43,3 +43,19 @@ function randomPicures_display_random_pictures($atts, $content = NULL) {
 }
         
 add_shortcode('randomPicture', 'randomPicures_display_random_pictures');
+
+
+// Plugin row meta
+
+function randomPicures_plugin_row_meta( $links, $file ) {    
+    if ( plugin_basename( __FILE__ ) == $file ) {
+        $row_meta = array(
+          'donate' => '<a href="https://www.paypal.me/prstuhlmann/2" style="color: green" target="_blank">Donate</a>'
+        );
+ 
+        return array_merge( $links, $row_meta );
+    }
+    return (array) $links;
+}
+
+add_filter( 'plugin_row_meta', 'randomPicures_plugin_row_meta', 10, 2 );
